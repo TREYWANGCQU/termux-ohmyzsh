@@ -1,5 +1,15 @@
 # Termux-ohmyzsh
 
+
+___________                                
+\__    ___/__________  _____  __ _____  ___
+  |    |_/ __ \_  __ \/     \|  |  \  \/  /
+  |    |\  ___/|  | \/  Y Y  \  |  />    < 
+  |____| \___  >__|  |__|_|  /____//__/\_ \
+             \/            \/            \/
+
+
+
 A fork from [oh-my-termux](https://github.com/4679/oh-my-termux) 。让你的 Termux 变的五颜六色～
 
 为 Termux 添加 [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) 终端环境以及 [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)，设置色彩样式（大部分来自 [Gogh](https://github.com/Mayccoll/Gogh) ）和 Powerline 字体（来自 [powerline/fonts](https://github.com/powerline/fonts)）。oh-my-zsh 主题默认为 agnoster，颜色样式默认为 Tango，字体默认为 Ubuntu。
