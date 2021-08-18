@@ -7,7 +7,7 @@ git clone https://github.com/TREYWANGCQU/termux-ohmyzsh "$HOME/termux-ohmyzsh"
 
 
 # install oh my zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/ohmyzsh/ohmyzsh.git "$HOME/.oh-my-zsh" --depth 1
 cp -R "$HOME/termux-ohmyzsh/.termux" "$HOME/.termux"
 cp "$HOME/termux-ohmyzsh/zshrc.zsh-template" "$HOME/.zshrc"
 
