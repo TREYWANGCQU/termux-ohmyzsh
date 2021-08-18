@@ -1,14 +1,18 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
 # basic
-pkg install -y git zsh wget
+pkg install -y git zsh wget vim openssh 
 git clone https://github.com/TREYWANGCQU/termux-ohmyzsh "$HOME/termux-ohmyzsh" 
+
+
 
 # install oh my zsh
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 cp -R "$HOME/termux-ohmyzsh/.termux" "$HOME/.termux"
 cp "$HOME/termux-ohmyzsh/zshrc.zsh-template" "$HOME/.zshrc"
 
+# modify motd
+cp -R "$HOME/termux-ohmyzsh/motd" "$PWD/"
 
 # install zsh addons
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
