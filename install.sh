@@ -1,25 +1,24 @@
 #!/data/data/com.termux/files/usr/bin/bash
-termux-setup-storage
 
-apt update
-apt install -y git zsh
-git clone https://github.com/Cabbagec/termux-ohmyzsh.git "$HOME/termux-ohmyzsh" --depth 1
+# basic
+pkg install -y git zsh wget
+git clone https://github.com/TREYWANGCQU/termux-ohmyzsh.git "$HOME/termux-ohmyzsh" --depth 1
 
-mv "$HOME/.termux" "$HOME/.termux.bak.$(date +%Y.%m.%d-%H:%M:%S)"
+# install oh my zsh
+sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 cp -R "$HOME/termux-ohmyzsh/.termux" "$HOME/.termux"
+cp "$HOME/termux-ohmyzsh/zshrc.zsh-template" "$HOME/.zshrc"
 
-git clone git://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh" --depth 1
-mv "$HOME/.zshrc" "$HOME/.zshrc.bak.$(date +%Y.%m.%d-%H:%M:%S)"
-cp "$HOME/.oh-my-zsh/templates/zshrc.zsh-template" "$HOME/.zshrc"
-sed -i '/^ZSH_THEME/d' "$HOME/.zshrc"
-sed -i '1iZSH_THEME="agnoster"' "$HOME/.zshrc"
-echo "alias chcolor='$HOME/.termux/colors.sh'" >> "$HOME/.zshrc"
-echo "alias chfont='$HOME/.termux/fonts.sh'" >> "$HOME/.zshrc"
 
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1
-echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> "$HOME/.zshrc"
+# install zsh addons
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
+
+
+# change shell to zsh
 chsh -s zsh
+rm -rf $HOME/termux-ohmyzsh
 
 echo "oh-my-zsh install complete!\nChoose your color scheme now~"
 $HOME/.termux/colors.sh
