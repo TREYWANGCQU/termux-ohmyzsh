@@ -101,5 +101,5 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias chcolor='$HOME/.termux/colors.sh
-alias chfont='$HOME/.termux/fonts.sh
+alias chcolor="$HOME/.termux/colors.sh"
+alias chfont="$HOME/.termux/fonts.sh"
