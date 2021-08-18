@@ -2,7 +2,7 @@
 
 # basic
 pkg install -y git zsh wget vim openssh 
-git clone https://github.com/TREYWANGCQU/termux-ohmyzsh "$HOME/termux-ohmyzsh" 
+git clone https://github.com/TREYWANGCQU/termux-ohmyzsh "$HOME/termux-ohmyzsh" --depth 1
 
 
 
@@ -12,7 +12,7 @@ cp -R "$HOME/termux-ohmyzsh/.termux" "$HOME/.termux"
 cp "$HOME/termux-ohmyzsh/zshrc.zsh-template" "$HOME/.zshrc"
 
 # modify motd
-rm  $PWD/motd
+rm  "$PWD/motd"
 cp "$HOME/termux-ohmyzsh/motd" "$PWD/"
 
 # install zsh addons
@@ -23,7 +23,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 # change shell to zsh
 chsh -s zsh
-rm -rf $HOME/termux-ohmyzsh
+rm -rf "$HOME/termux-ohmyzsh"
 
 echo "oh-my-zsh install complete!\nChoose your color scheme now~"
 $HOME/.termux/colors.sh
