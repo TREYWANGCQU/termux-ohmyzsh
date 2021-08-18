@@ -2,7 +2,7 @@
 
 # basic
 pkg install -y git zsh wget
-git clone https://github.com/TREYWANGCQU/termux-ohmyzsh.git "$HOME/termux-ohmyzsh" --depth 1
+git clone https://github.com/TREYWANGCQU/termux-ohmyzsh "$HOME/termux-ohmyzsh" 
 
 # install oh my zsh
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
