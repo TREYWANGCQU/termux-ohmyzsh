@@ -7,7 +7,7 @@ A fork from [oh-my-termux](https://github.com/4679/oh-my-termux) 。让你的 Te
 **此 Repo 使用 Termux 官方源，在中国大陆可能需要将 Termux 应用添加到代理列表。**
 ## 使用：
 ```shell
-sh -c "$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)"
+sh -c "$(curl -fsSL https://github.com/TREYWANGCQU/termux-ohmyzsh/raw/master/install.sh)"
 ```
 
 ## 设置色彩样式：
@@ -22,15 +22,15 @@ sh -c "$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/instal
 ~/.termux/fonts.sh
 ```
 
-## 需要软件包：
- - curl
+~~## 需要软件包：
+ ~~- curl
 
-## 恢复到安装前的环境
-1. 在 home 目录下可找到按日期命名的 zshrc 备份文件，形如 `.zshrc.bak.2018.1.1-00:00:00`，将其文件名恢复为 `.zshrc`。若不存在备份文件，删除当前的 `.zshrc`。
+~~## 恢复到安装前的环境
+~~1. 在 home 目录下可找到按日期命名的 zshrc 备份文件，形如 `.zshrc.bak.2018.1.1-00:00:00`，将其文件名恢复为 `.zshrc`。若不存在备份文件，删除当前的 `.zshrc`。
 
-2. 在 home 目录下可找到按日期命名的 termux 备份配置目录，形如 `.termux.bak.2018.1.1-00:00:00`，将其文件名恢复为`.termux`。若不存在备份，删除当前的 `.termux` 目录。
+~~2. 在 home 目录下可找到按日期命名的 termux 备份配置目录，形如 `.termux.bak.2018.1.1-00:00:00`，将其文件名恢复为`.termux`。若不存在备份，删除当前的 `.termux` 目录。
 
-3. 重启 termux
+~~3. 重启 termux
 
 ## 使用提示（参照Termux Wiki）
 要调整字体大小，双指缩放即可。另外，Termux 使用音量键模拟一些 shell 功能：
