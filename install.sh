@@ -12,7 +12,8 @@ cp -R "$HOME/termux-ohmyzsh/.termux" "$HOME/.termux"
 cp "$HOME/termux-ohmyzsh/zshrc.zsh-template" "$HOME/.zshrc"
 
 # modify motd
-cp -R "$HOME/termux-ohmyzsh/motd" "$PWD/"
+rm  $PWD/motd
+cp "$HOME/termux-ohmyzsh/motd" "$PWD/"
 
 # install zsh addons
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
