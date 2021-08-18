@@ -5,6 +5,10 @@ pkg install -y git zsh wget vim openssh
 git clone https://github.com/TREYWANGCQU/termux-ohmyzsh "$HOME/termux-ohmyzsh" --depth 1
 
 
+#backpack
+mv "$HOME/.zshrc" "$HOME/.zshrc.bak.$(date +%Y.%m.%d-%H:%M:%S)"
+mv "$HOME/.termux" "$HOME/.termux.bak.$(date +%Y.%m.%d-%H:%M:%S)"
+mv "$PREFIX/etc/motd" "$PREFIX/etc/motd.bak.$(date +%Y.%m.%d-%H:%M:%S)"
 
 # install oh my zsh
 git clone https://github.com/ohmyzsh/ohmyzsh.git "$HOME/.oh-my-zsh" --depth 1
@@ -12,8 +16,7 @@ cp -R "$HOME/termux-ohmyzsh/.termux" "$HOME/.termux"
 cp "$HOME/termux-ohmyzsh/zshrc.zsh-template" "$HOME/.zshrc"
 
 # modify motd
-rm  "$PREFIX/etc/motd"
-cp "$HOME/termux-ohmyzsh/motd" "$PWD/etc/"
+cp "$HOME/termux-ohmyzsh/motd" "$PREFIX/etc/"
 
 # install zsh addons
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
